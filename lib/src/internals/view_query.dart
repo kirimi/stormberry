@@ -47,7 +47,7 @@ class ViewQuery<Result> implements Query<List<Result>, QueryParams> {
     """), parameters: params.values);
 
     var results = res.map((row) => queryable.decode(TypedMap(row.toColumnMap()))).toList();
-    print('Queried ${results.length} rows in ${DateTime.now().difference(time)}');
+    // print('Queried ${results.length} rows in ${DateTime.now().difference(time)}');
     return results;
   }
 }
